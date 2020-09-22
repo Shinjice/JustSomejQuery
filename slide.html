@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <script src="js/jquery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+           
+            $("slide-up").click(function(){
+                
+                $("textBox").slideUp("2000", "linear");
+
+            })
+
+            $("slide-down").click(function(){
+                
+                $("textBox").slideDown("2000", "linear");
+
+            })
+
+            $("toggleSlide").click(function(){
+                
+                $("textBox").slideToggle("2000", function(){
+                    alert("Done");
+                });
+
+            })
+
+
+        });    
+    </script>
+    
+    <style>
+
+     
+
+    </style>
+
+    </head>
+
+    <body>  
+    
+        <a href="#" id="slide-up">Slide Up</a>
+        <a href="#" id="slide-down">Slide Down</a>
+        <a href="#" id="toggleSlide">Toggle</a>
+
+        <div id="textBox"></div>
+
+        <p>
+            Hallo
+        </p>
+
+    </div>
+    
+    </body>
+</html>
