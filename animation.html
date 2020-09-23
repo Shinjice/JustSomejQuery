@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery</title>
+        <script src="js/jquery.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+            var div = $("div");  
+            div.animate({left: '100px'}, "slow");
+            div.animate({fontSize: '3em'}, "slow");
+        });
+    });
+    </script>
+    
+    <style>
+
+    </style>
+
+    </head>
+
+    <body>  
+        <button>Click here!</button>
+
+        <div style="background: #c2c2c2;;height:100px;width:200px;position:absolute;">Whatsup!</div>
+    
+    </body>
+</html>

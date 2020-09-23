@@ -5,53 +5,51 @@
         <script src="js/jquery.js"></script>
     
     <script>
-        $(document).ready(function(){
-           
-            $("slide-up").click(function(){
-                
-                $("textBox").slideUp("2000", "linear");
-
-            })
-
-            $("slide-down").click(function(){
-                
-                $("textBox").slideDown("2000", "linear");
-
-            })
-
-            $("toggleSlide").click(function(){
-                
-                $("textBox").slideToggle("2000", function(){
-                    alert("Done");
-                });
-
-            })
-
-
-        });    
+     $(document).ready(function(){
+        
+        $("#flip").click(function(){
+            $("#panel").slideDown(5000);
+        });
+        
+        $("#stop").click(function(){
+            $("#panel").stop();
+        });
+    });
     </script>
     
     <style>
+    #stop, #panel, #flip{
+        padding: 5px;
+        font-size: 18px;
+        background-color:crimson;
+        color: white;
+        border: solid 1px #666;
+        border-radius: 3px;
+    }
 
-     
-
+    #panel {
+        display: none;
+    }
     </style>
 
     </head>
 
     <body>  
-    
-        <a href="#" id="slide-up">Slide Up</a>
-        <a href="#" id="slide-down">Slide Down</a>
-        <a href="#" id="toggleSlide">Toggle</a>
+        <div id="stop">Click here to stop sliding</div>
 
-        <div id="textBox"></div>
-
-        <p>
-            Hallo
-        </p>
-
-    </div>
-    
+        <div id="flip">Click to slide down panel</div>
+        <div id="panel">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </div>
     </body>
 </html>
